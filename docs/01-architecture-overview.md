@@ -1,30 +1,30 @@
 # Architecture Overview — Enterprise Zero Trust Identity
 
 ## Context
-This project implements an identity-first Zero Trust architecture using Microsoft Entra ID (Azure AD) in a single enterprise tenant. The design follows Microsoft Zero Trust principles: explicit verification, least privilege access, and continuous risk evaluation.
+This project implements an identity-first Zero Trust architecture using Microsoft Entra ID (Azure AD) within a single enterprise tenant. The design aligns with Microsoft Zero Trust principles by enforcing explicit verification, least-privilege access, and continuous risk evaluation.
 
-## Goals
-- Eliminate implicit trust based on network location
+## Objectives
+- Eliminate implicit trust based on network or location
 - Enforce strong authentication using MFA and Conditional Access
-- Protect privileged access with Just-In-Time (JIT) elevation
-- Enable recoverability through controlled emergency access
-- Provide audit-ready logging and visibility
+- Secure privileged access using just-in-time elevation
+- Ensure recoverability through controlled emergency access
+- Provide centralized logging and audit visibility
 
-## Core Principles Applied
-- Identity is the new control plane
-- All access is verified using signals (user, device, location, risk)
+## Zero Trust Principles Applied
+- Identity as the primary security control plane
+- Access decisions based on user, device, location, and risk
 - Privileged access is time-bound and monitored
-- Exceptions are explicit, documented, and monitored
+- Exceptions are explicit, documented, and audited
 
 ## Control Plane Components
-- Microsoft Entra ID (Identity provider)
-- Conditional Access (Policy enforcement)
+- Microsoft Entra ID (Identity Provider)
+- Conditional Access (Policy Enforcement)
 - Privileged Identity Management (PIM)
-- Identity Protection (Risk detection)
-- Azure Monitor & Sign-in Logs (Telemetry)
+- Identity Protection (Risk-Based Detection)
+- Entra Sign-in & Audit Logs
 
 ## Outcomes
 - Reduced attack surface
-- Strong admin isolation
-- Policy-driven access decisions
-- Recoverable, enterprise-grade identity posture
+- Strong separation between standard and privileged access
+- Continuous verification for all identities
+- Enterprise-grade identity resilience
